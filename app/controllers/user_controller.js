@@ -27,7 +27,7 @@ exports.addUser = async (ctx, next) => {
 
   return db.sequelize.transaction(function(t){
     console.log("数据库写入用户开始");
-    return db.User.create(saveUser,{
+    return db.MyUser.create(saveUser,{
       transaction:t
     }).then(function(result){
       ctx.body = result;
@@ -54,7 +54,7 @@ exports.deleteUser = async (ctx, next) => {
     });
   })*/
    //  正常删除
-  return db.User.destroy({'where':{'name':name}})
+  return db.myUser.destroy({'where':{'name':name}})
     .then(function(result){
       ctx.body = result;
       console.log('删除用户成功');
@@ -69,7 +69,7 @@ exports.findUser = async (ctx, next) => {
 
   return db.sequelize.transaction(function(){
     // findOne findAll和 findById
-    return db.User.findOne({'where':{name: name}})
+    return db.myUser.findOne({'where':{name: name}})
       .then(function(result){
           ctx.body = result;
     }).catch(function(err){
@@ -96,7 +96,7 @@ exports.updateUser = async (ctx, next) => {
             });
       })*/
     //  直接更新
-    return db.User.update({'name':'123123121'},{'where':{'name':userInfo}})
+    return db.myUser.update({'name':'123123121'},{'where':{'name':userInfo}})
       .then(function(result){
         ctx.body = result
       }).catch(function(err){

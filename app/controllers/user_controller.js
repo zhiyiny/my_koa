@@ -1,5 +1,5 @@
 // 引入数据库
-var db = require('../../sqldb/index.js');
+var db = require('../../models/index.js');
 //获取用户
 exports.getUser = async (ctx, next) => {
   ctx.body = {

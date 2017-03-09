@@ -8,15 +8,15 @@ const json = require('koa-json');
 const onerror = require('koa-onerror');
 const bodyparser = require('koa-bodyparser')();
 const logger = require('koa-logger');
-var sqldb = require('./sqldb');
-
-
-//  连接数据库
-sqldb.sequelize.sync({force: false}).then(function() {
-  console.log("database start successed ");
-}).catch(function(err){
-  console.log("Server failed to start due to error: %s", err);
-});
+//  var sqldb = require('./sqldb');
+//
+//
+// //  连接数据库
+// sqldb.sequelize.sync({force: false}).then(function() {
+//   console.log("database start successed ");
+// }).catch(function(err){
+//   console.log("Server failed to start due to error: %s", err);
+// });
 
 const index = require('./routes/index');
 const users = require('./routes/users');

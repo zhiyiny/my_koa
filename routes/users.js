@@ -1,6 +1,8 @@
 var router = require('koa-router')();
-var db = require('../sqldb/index.js');
+var db = require('../models/index.js');
 var user_controller = require('../app/controllers/user_controller');
+
+
 router.get('/', function (ctx, next) {
 
   //const name = ctx.query;

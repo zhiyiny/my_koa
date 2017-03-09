@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<h1>测试页面</h1>
+<form action="./users/update" method="get">
+  用户名：<input type="text" name="name" id="name"><br>
+  年龄： <input type="text" name="age" id="age"><br>
+  身高： <input type="text" name="height" ><br>
+  体重： <input type="text" name="weight" ><br>
+ <input type="submit" ><br>
+  <!--<button id="btn">删除</button>-->
+</form>
+
+<script type="text/javascript">
+   /* var btn = document.getElementById('btn')
+    var userInfo = {};
+    userInfo.name = document.getElementById('name').value;
+    userInfo.age = document.getElementById('age').value;
+    btn.onclick = function () {
+      deleteUser(userInfo)
+    }
+    function getXMLHttpRequest() {
+      var xhr;
+      if(window.ActiveXObject) {
+        xhr= new ActiveXObject("Microsoft.XMLHTTP");
+      }else if (window.XMLHttpRequest) {
+        xhr= new XMLHttpRequest();
+      }else {
+        xhr= null;
+      }
+      return xhr;
+    }
+
+    function deleteUser(userInfo) {
+      var xhr = getXMLHttpRequest();
+      xhr.open("get", "/users/delete/"+ userInfo);
+      xhr.send();
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          alert("returned:" + xhr.responseText);
+        }
+      };
+    }*/
+</script>
+</body>
+</html>

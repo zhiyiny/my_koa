@@ -1,9 +1,9 @@
 /**
- *    用户路由   f放弃掉
+ *    用户路由
  */
 var router = require('koa-router')();
 
-var user_controller = require('../app/controllers/user_controller');
+var user_controller = require('../controllers/user_controller');
 router.get('/', function (ctx, next) {
 
   //const name = ctx.query;
@@ -15,5 +15,8 @@ router.get('/', function (ctx, next) {
 router.get('/get', user_controller.getUser);
 router.get('/register', user_controller.registerUser);
 router.get('/add', user_controller.addUser);
+router.get('/delete', user_controller.deleteUser);
+router.get('/find', user_controller.findUser);
+router.get('/update', user_controller.updateUser);
 
 module.exports = router;

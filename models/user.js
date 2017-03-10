@@ -1,29 +1,16 @@
-module.exports = function(sequelize,DataTypes){
-  var User = sequelize.define('user',{
-    id:{
-      type:DataTypes.UUID,
-      primaryKey:true,
-      allowNull:true,
-      defaultValue:DataTypes.UUIDV1
-    },
-    name:{
-      type:DataTypes.STRING,
-      allowNull:true
-    },
-    age:{
-      type:DataTypes.INTEGER,
-      allowNull:true
-    },
-    height:{
-      type:DataTypes.INTEGER,
-      allowNull:true
-    },
-    weight:{
-      type:DataTypes.INTEGER,
-      allowNull:true
+'use strict';
+module.exports = function(sequelize, DataTypes) {
+  var user = sequelize.define('user', {
+    name: DataTypes.STRING,
+    age: DataTypes.STRING,
+    height: DataTypes.STRING,
+    weight: DataTypes.STRING
+  }, {
+    classMethods: {
+      associate: function(models) {
+        // associations can be defined here
+      }
     }
-  },{
-    freezeTableName: true
   });
-  return User;
+  return user;
 };

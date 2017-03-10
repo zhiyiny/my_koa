@@ -1,6 +1,7 @@
 var router = require('koa-router')();
-var db = require('../models/index.js');
-var user_controller = require('../app/controllers/user_controller');
+// 看/ 路径需要来决定是否引入db
+// var db = require('../models/index.js');
+var user_controller = require('../controllers/user_controller');
 
 
 router.get('/', function (ctx, next) {
